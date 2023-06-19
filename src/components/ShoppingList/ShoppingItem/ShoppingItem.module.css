@@ -1,0 +1,51 @@
+.Goods {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+  min-height: 10rem;
+}
+
+.goodContent {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  width: 100%;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 30px 30px 0;
+  overflow: hidden;
+}
+
+.goodInfo {
+  padding: 1rem;
+}
+
+.foodPrice {
+  color: yellow;
+  margin: 2rem 0 0 3rem;
+}
+
+.GoodImg {
+  margin-right: 1rem;
+  max-width: 14rem;
+}
+
+.Add {
+  width: 4rem;
+  height: 100%;
+  color: #000;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Add:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #b77803;
+}
+
+.Add:active {
+  opacity: 0.7;
+}

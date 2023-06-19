@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Shop.module.css";
-import { Link } from "react-router-dom";
+import ShopList from "../ShopList/ShopList";
+import ShoppingList from "../ShoppingList/ShoppingList";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+function Shop({ avaiableShops, newItem }) {
+  const [currentShop, setCurrentShop] = useState(null);
+  const [basketList, setBasketList] = useState([]); // Добавил это
 
-function Shop() {
+  const handleShopSelect = (shop) => {
+    setCurrentShop(shop);
+  };
+
   return (
-    <Link to="/cart" className={style.link}>
-      <FontAwesomeIcon icon={faCartShopping} />
-    </Link>
+    <div className={style.content}>
+      <div className={style.conentColumn}>
+        <ShopList ShopList={avaiableShops} onSelectShop={handleShopSelect} />
+      </div>
+      <div className={style.conentColumn}>
+        <ShoppingList
+          ShopList={currentShop}
+          selectedItem={newItem}
+          linkTo="Order"
+        />
+      </div>
+    </div>
   );
 }
 

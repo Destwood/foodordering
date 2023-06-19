@@ -1,2 +1,9 @@
-.link {
+.content {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.conentColumn {
+  width: 47%;
 }

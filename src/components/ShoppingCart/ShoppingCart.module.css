@@ -1,0 +1,168 @@
+.btn {
+  position: fixed;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  background-color: black;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  padding: 1rem;
+  bottom: 2rem;
+  right: 3rem;
+}
+
+.foodItem {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.itemPic {
+  max-width: 20rem;
+}
+
+.itemInfo {
+  font-size: 2rem;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0 30px 30px 0;
+}
+
+.price {
+  color: yellow;
+}
+
+.total {
+  font-size: 1.5rem;
+  background-color: #fff;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 50px;
+  float: right;
+  color: #000;
+}
+
+/* content area */
+
+.shopPic {
+  max-width: 300px;
+}
+
+/* content area end */
+
+/* modal area */
+.modal {
+  position: fixed; /* фиксированное положение */
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* фон */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+
+/* При отображении модального окно */
+.modal:target {
+  opacity: 1; /* делаем окно видимым */
+  pointer-events: auto; /* элемент видим для событий мыши */
+  overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+/* ширина модального окна и его отступы от экрана */
+.modalDialog {
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+
+/* Стили для блока с контентом окна */
+.modalContent {
+  padding: 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #121212;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+/* Стили заголовка окна */
+.modalHeader {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+
+.modalBody {
+  padding: 3rem;
+}
+.modalTitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+/* Стили кнопки "х" ("Закрыть")  */
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+/* Стили для закрывающей кнопки в фокусе или наведении */
+.close:focus,
+.close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+/* Стили блока основного содержимого окна */
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+}
